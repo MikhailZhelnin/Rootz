@@ -108,14 +108,14 @@ const Slider = () => {
 
             <div data-aos="fade-up" className={styles.sliderNavigation}>
                 <button className={styles.sliderNavigationBtn} onClick={goToPrev}>
-                    <img src={icons.arrow_left}/>
+                    <img src={icons.arrow_left} alt='Arrow left'/>
                 </button>
                 <div>
                     <span className={styles.sliderNavigationNumberCurrent}>{currentIndex + 1}</span>
                     <span className={styles.sliderNavigationNumberAmount}> / {data.length}</span>
                 </div>
                 <button className={styles.sliderNavigationBtn} onClick={goToNext}>
-                    <img src={icons.arrow_right}/>
+                    <img src={icons.arrow_right} alt='Arrow right'/>
                 </button>
             </div>
         </div>

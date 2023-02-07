@@ -20,13 +20,14 @@ const SliderItem = ({slide, currentIndex}) => {
     return (
         <div data-aos="zoom-in-up" className={styles.sliderItem}>
             {currentIndex === slide.id - 1
-                ? <img src={width > 500 ? icons.slider.slide_bg : icons.slider.slide_mobile_bg}/>
-                : <img src={slide.img}/>
+                ? <img src={width > 500 ? icons.slider.slide_bg : icons.slider.slide_mobile_bg} alt='Slider main'/>
+                : <img src={slide.img} alt='Slider second'/>
             }
             {currentIndex === slide.id - 1 &&
                 <img
                     src={slide.mini_img !== undefined ? slide.mini_img : slide.img}
                     className={styles.sliderImage}
+                    alt='Slider mini image'
                 />
             }
             <div className={styles.sliderContent}>

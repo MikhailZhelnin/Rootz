@@ -30,15 +30,15 @@ const Team = () => {
 
                 <div data-aos='fade-up' className={styles.cards}>
                     <div className={styles.cardOne}>
-                        <img src={width > 500 ? images.team.card_1 : images.team.card_mobile_1}/>
-                        <img src={width > 768 ? icons.team.line_1 : icons.team.line_mobile_1} className={styles.cardOneLine}/>
+                        <img src={width > 500 ? images.team.card_1 : images.team.card_mobile_1} alt='Person 1'/>
+                        <img src={width > 768 ? icons.team.line_1 : icons.team.line_mobile_1} className={styles.cardOneLine} alt='Person 1 line'/>
                     </div>
                     <div className={styles.cardTwo}>
-                        <img src={width > 500 ? images.team.card_2 : images.team.card_mobile_2}/>
+                        <img src={width > 500 ? images.team.card_2 : images.team.card_mobile_2} alt='Person 2'/>
                     </div>
                     <div className={styles.cardThree}>
-                        <img src={width > 500 ? images.team.card_3 : images.team.card_mobile_3}/>
-                        <img src={width > 768 ? icons.team.line_2 : icons.team.line_mobile_2} className={styles.cardThreeLine}/>
+                        <img src={width > 500 ? images.team.card_3 : images.team.card_mobile_3} alt='Person 3'/>
+                        <img src={width > 768 ? icons.team.line_2 : icons.team.line_mobile_2} className={styles.cardThreeLine} alt='Person 3 line'/>
                     </div>
                 </div>
             </div>

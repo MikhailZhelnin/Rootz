@@ -59,8 +59,8 @@ const Contact = () => {
                                 <span className={styles.headerTitle}>{question.question}</span>
                                 <button className={styles.headerButton}>
                                     {selected === question.id
-                                        ? <img src={icons.minus} className={styles.headerButtonIcon}/>
-                                        : <img src={icons.plus} className={styles.headerButtonIcon}/>
+                                        ? <img src={icons.minus} className={styles.headerButtonIcon} alt='Minus'/>
+                                        : <img src={icons.plus} className={styles.headerButtonIcon} alt='Plus'/>
                                     }
                                 </button>
                             </div>

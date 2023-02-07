@@ -34,7 +34,7 @@ const Banner = () => {
                             something.</p>
                     </div>
                     <form className={styles.search} onSubmit={submitForm}>
-                        <img src={icons.banner.location} className={styles.searchIcon}/>
+                        <img src={icons.banner.location} alt='Location' className={styles.searchIcon}/>
                         <input
                             type='text'
                             placeholder='Find the place to help'
@@ -49,7 +49,7 @@ const Banner = () => {
                 </div>
 
                 <div data-aos='fade-left'  className={styles.right}>
-                    <img src={width > 600 ? icons.banner.parrot : icons.banner.parrot_mobile} className={styles.parrotIcon}/>
+                    <img src={width > 600 ? icons.banner.parrot : icons.banner.parrot_mobile} alt='Parrot' className={styles.parrotIcon}/>
                 </div>
             </div>
         </div>

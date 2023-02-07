@@ -51,8 +51,8 @@ const Footer = () => {
                     <ul data-aos='fade-up' className={styles.columnSocial}>
                         {socialLinksData.map(link => (
                             <li key={link.id} className={styles.columnSocialItem}>
-                                <a href={link.link} target='_blank' className={styles.columnSocialItemLink}>
-                                    <img src={link.icon}/>
+                                <a href={link.link} target='_blank' rel="noreferrer" className={styles.columnSocialItemLink}>
+                                    <img src={link.icon} alt='Social link'/>
                                 </a>
                             </li>
                         ))}
