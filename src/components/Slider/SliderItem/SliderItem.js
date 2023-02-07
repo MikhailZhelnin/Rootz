@@ -27,7 +27,7 @@ const SliderItem = ({slide, currentIndex}) => {
                 <img
                     src={slide.mini_img !== undefined ? slide.mini_img : slide.img}
                     className={styles.sliderImage}
-                    alt='Slider mini image'
+                    alt='Slider mini'
                 />
             }
             <div className={styles.sliderContent}>
