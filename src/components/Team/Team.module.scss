@@ -1,0 +1,143 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.team {
+  margin-bottom: 192px;
+  padding-bottom: 50px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 150px;
+    padding-bottom: 0px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 100px;
+  }
+
+  .wrapper {
+    @include container;
+
+    .header {
+      max-width: 352px;
+      margin: 0 auto 13px;
+      text-align: center;
+
+      @media (max-width: $mobile) {
+        margin-bottom: 40px;
+      }
+
+      .headerTitle {
+        @include sectionTitle;
+        margin-bottom: 16px;
+
+        @media (max-width: $mobile) {
+          margin-bottom: 8px;
+        }
+      }
+      .headerText {
+        font-size: 18px;
+        line-height: 32px;
+      }
+    }
+    .cards {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      @media (max-width: $mobile) {
+        flex-direction: column;
+      }
+
+      .cardOne {
+        position: relative;
+
+        @media (max-width: $mobile) {
+          margin-bottom: 40px;
+        }
+
+        .cardOneLine {
+          position: absolute;
+          left: 50%;
+          top: 8%;
+          z-index: -1;
+
+          @media (max-width: $tablet) {
+            left: 44%;
+            top: 12%;
+          }
+          @media (max-width: 850px) {
+            left: 32%;
+            top: -9%;
+            transform: scale(0.8);
+          }
+          @media (max-width: $mobile) {
+            left: 44%;
+            top: 45%;
+            transform: scale(1);
+          }
+          @media (max-width: $medium_mobile) {
+            left: 57%;
+            top: 40%;
+          }
+          @media (max-width: $small_mobile) {
+            left: 40%;
+            top: 37%;
+          }
+        }
+
+      }
+      .cardTwo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 112px;
+
+        @media (max-width: $mobile) {
+          margin-bottom: 40px;
+        }
+
+        @media (max-width: $mobile) {
+          position: relative;
+          left: 0;
+          transform: translateX(0);
+          top: 0;
+          align-self: flex-end;
+        }
+      }
+      .cardThree {
+        position: relative;
+
+        .cardThreeLine {
+          position: absolute;
+          right: 40%;
+          top: 45%;
+          z-index: -1;
+          
+          @media (max-width: $tablet) {
+            top: 60%;
+            right: 15%;
+          }
+          @media (max-width: 850px) {
+            top: 67%;
+            right: -1%;
+            transform: scale(0.8);
+          }
+          @media (max-width: $mobile) {
+            top: -46%;
+            right: 45%;
+            transform: scale(1) rotate(20deg);
+          }
+          @media (max-width: $medium_mobile) {
+            top: -65%;
+            right: 55%;
+            transform: scale(1) rotate(0deg);
+          }
+          @media (max-width: $small_mobile) {
+            top: -78%;
+            right: 43%;
+          }
+        }
+      }
+    }
+  }
+}

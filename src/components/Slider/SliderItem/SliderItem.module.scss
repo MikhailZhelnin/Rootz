@@ -1,0 +1,60 @@
+@import "../../../styles/_variables.scss";
+
+.sliderItem {
+  display: flex !important;
+  justify-content: center !important;
+  position: relative !important;
+  margin-bottom: 32px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+  .sliderImage {
+    position: absolute;
+    top: -8%;
+    left: 35px;
+
+    @media (max-width: $medium_mobile) {
+      top: -20%;
+      left: 6px;
+    }
+  }
+  .sliderContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    text-align: center;
+
+    @media (max-width: $medium_mobile) {
+      width: 70%;
+    }
+
+    .sliderTitle {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 34px;
+      color: white;
+
+      &.sliderTitleActive {
+        color: $main-color;
+        
+        @media (max-width: $medium_mobile) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .sliderText {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      line-height: 24px;
+
+      @media (max-width: $medium_mobile) {
+        top: 35px;
+        font-size: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.banner {
+  height: 100vh;
+  margin-bottom: 192px;
+  padding-top: 101px;
+  background-color: $main-background-color;
+  overflow: hidden;
+  
+  @media (max-width: $medium_mobile) {
+    overflow-y: visible;
+    overflow-x: clip;
+    height: 968px;
+    margin-bottom: 250px;
+    padding-top: 150px;
+  }
+
+  .wrapper {
+    @include container;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    @media (max-width: $medium_mobile) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media (max-width: $medium_mobile) {
+        width: 100%;
+      }
+
+      .headline {
+        margin-bottom: 40px;
+
+        @media (max-width: $medium_mobile) {
+          margin-bottom: 30px;
+        }
+      }
+      .text {
+        max-width: 448px;
+        margin-bottom: 50px;
+        line-height: 32px;
+
+        @media (max-width: $medium_mobile) {
+          max-width: 95%;
+          font-size: 15px;
+          margin-bottom: 40px;
+        }
+      }
+      .search {
+        display: flex;
+        align-items: center;
+        max-width: 448px;
+        width: 100%;
+        padding: 8px 8px 8px 21px;
+        background-color: white;
+        border-radius: 40px;
+
+        @media (max-width: $medium_mobile) {
+          max-width: 100%;
+        }
+
+        @media (max-width: 375px) {
+          padding: 5px 5px 5px 5px;
+        }
+
+        .searchIcon {
+          margin-right: 8px;
+        }
+        .searchInput {
+          flex-grow: 1;
+          padding-right: 8px;
+          outline: none;
+          border: none;
+        }
+        .searchButton {
+          @include button;
+
+          @media (max-width: 375px) {
+            padding: 15px 15px;
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 50%;
+
+      @media (max-width: $medium_mobile) {
+        width: 101%;
+      }
+
+      .parrotIcon {
+
+        @media (max-width: $mobile) {
+          transform: scale(0.8);
+        }
+        @media (max-width: $medium_mobile) {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}

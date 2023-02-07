@@ -1,0 +1,106 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.footer {
+  padding-bottom: 88px;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 70px;
+  }
+  @media (max-width: $mobile) {
+    padding-bottom: 42px;
+  }
+
+  .wrapper {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    @media (max-width: $medium_mobile) {
+      justify-content: flex-start;
+    }
+
+    .column {
+
+      @media (max-width: $medium_mobile) {
+        &:nth-child(1) {
+          width: 100%;
+          margin-bottom: 33px;
+
+          .columnText {
+            max-width: 100%;
+          }
+        }
+
+        &:nth-child(2) {
+          margin-right: 53px;
+        }
+      }
+
+
+      .columnTitle {
+        margin-bottom: 32px;
+        font-size: 34px;
+        font-weight: bold;
+        line-height: 48px;
+        color: $main-color;
+
+        @media (max-width: $tablet) {
+          margin-bottom: 26px;
+        }
+        @media (max-width: $mobile) {
+          margin-bottom: 0px;
+          font-size: 28px;
+        }
+
+        &.columnTitleLittle {
+          font-size: 20px;
+
+          @media (max-width: $mobile) {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .columnText {
+        display: block;
+        max-width: 163px;
+        font-size: 13px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+
+        @media (max-width: $mobile) {
+          font-size: 12px;
+        }
+      }
+
+      .columnSocial {
+        display: flex;
+        .columnSocialItem {
+          margin-right: 16px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+          .columnSocialItemLink {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: $social-link-color;
+            cursor: pointer;
+            transition: background-color .2s linear;
+
+            &:hover {
+              background-color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

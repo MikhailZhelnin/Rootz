@@ -1,0 +1,153 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.book {
+  margin-bottom: 195px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 150px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 100px;
+  }
+
+  .wrapper {
+    @include container;
+
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      padding: 104px;
+      background-color: $secondary-background-color;
+      border-radius: 20px;
+
+      @media (max-width: $tablet) {
+        padding: 60px;
+      }
+
+      @media (max-width: $mobile) {
+        padding: 30px;
+      }
+
+      @media (max-width: $medium_mobile) {
+        flex-direction: column;
+        padding: 56px 18px;
+      }
+
+      .left {
+        width: 50%;
+        padding-right: 70px;
+
+        @media (max-width: $mobile) {
+          padding-right: 30px;
+        }
+
+        @media (max-width: $medium_mobile) {
+          width: 90%;
+          padding-right: 0px;
+          margin-bottom: 55px;
+        }
+
+        .title {
+          @include sectionTitle;
+          margin-bottom: 40px;
+
+          @media (max-width: $mobile) {
+            margin-bottom: 20px;
+          }
+        }
+        .text {
+
+          @media (max-width: $mobile) {
+            font-size: 15px;
+            line-height: 26px;
+          }
+        }
+      }
+      .right {
+        width: 50%;
+        padding-left: 30px;
+
+        @media (max-width: $tablet) {
+          padding-left: 0px;
+        }
+
+        @media (max-width: $medium_mobile) {
+          width: 100%;
+        }
+
+        .form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          padding: 40px 55px;
+          background-color: $main-background-color;
+          border-radius: 16px;
+
+          @media (max-width: $tablet) {
+            padding: 30px 30px;
+          }
+
+          @media (max-width: $medium_mobile) {
+            padding: 40px 24px;
+          }
+
+          .formTitle {
+            margin-bottom: 25px;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 56px;
+            color: $main-color;
+
+            @media (max-width: $mobile) {
+              font-size: 24px;
+              line-height: 32px;
+            }
+          }
+          .formInput {
+            width: 100%;
+            margin-bottom: 16px;
+            padding: 12px 24px;
+            font-size: 14px;
+            line-height: 24px;
+            border: none;
+            border-radius: 40px;
+
+            &:focus {
+              outline-color: #FAA881;
+            }
+          }
+          .formButton {
+            @include button;
+            width: 100%;
+          }
+          .formLeafOne {
+            position: absolute;
+            top: -16px;
+            right: -18px;
+
+            @media (max-width: $medium_mobile) {
+              right: -15px;
+            }
+          }
+          .formLeafTwo {
+            position: absolute;
+            top: 60px;
+            right: -14px;
+
+            @media (max-width: $medium_mobile) {
+              top: 50px;
+              right: -10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../styles/_variables.scss";
+
+.slider {
+  margin-bottom: 96px;
+  padding: 104px 0;
+  background-color: $secondary-background-color;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 70px;
+    padding: 72px 0;
+  }
+  @media (max-width: $mobile) {
+    margin-bottom: 43px;
+  }
+
+  .sliderNavigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .sliderNavigationBtn {
+      display: inline-flex;
+      align-items: center;
+      padding: 15px 15px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      transition: all .2s linear;
+
+      &:first-child {
+        margin-right: 25px;
+      }
+      &:last-child {
+        margin-left: 25px;
+      }
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+    .sliderNavigationNumberCurrent {
+      font-size: 24px;
+
+      @media (max-width: $medium_mobile) {
+        font-size: 22px;
+      }
+    }
+    .sliderNavigationNumberAmount {
+      font-size: 24px;
+      color: rgba(0,0,0, 0.2);
+
+      @media (max-width: $medium_mobile) {
+        font-size: 22px;
+      }
+    }
+  }
+}

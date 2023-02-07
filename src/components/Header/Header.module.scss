@@ -1,0 +1,119 @@
+@import "../../styles/_variables.scss";
+
+.header {
+  position: absolute;
+  padding: 20px 18px 0px 18px;
+  max-width: 1316px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  &.headerFixed {
+    position: fixed;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid #222433;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 10;
+    background-color: $main-background-color;
+
+    @media (max-width: $tablet) {
+      justify-content: space-between;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      width: 100%;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+
+      .navigationItem {
+        padding: 0 50px 0 50px;
+        cursor: pointer;
+
+        &:hover {
+          -webkit-text-stroke: 1px black;
+        }
+
+        &:first-child {
+          -webkit-text-stroke: 1px black;
+        }
+
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+
+    .button {
+      font-weight: 700;
+      border: none;
+      font-size: 16px;
+      background-color: white;
+      border-radius: 40px;
+      padding: 13px 48px;
+      cursor: pointer;
+      transition: background-color 0.2s linear;
+
+      &:hover {
+        background-color: #F26C74;
+      }
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    .hamburgerMenu {
+      display: none;
+
+      @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        cursor: pointer;
+        width: 30px;
+      }
+
+      .hamburgerMenuBar {
+        width: 22px;
+        height: 3px;
+        margin-bottom: 4px;
+        background: $main-color;
+        border-radius: 5px;
+        transition: all .2s linear;
+
+        &:nth-child(2) {
+          width: 17px;
+        }
+
+        &.hamburgerMenuBarClose {
+          &:nth-child(1) {
+            position: absolute;
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            position: absolute;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+

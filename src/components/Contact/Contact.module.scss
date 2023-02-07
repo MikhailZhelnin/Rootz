@@ -1,0 +1,148 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.contact {
+  margin-bottom: 192px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 150px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 100px;
+  }
+
+  .wrapper {
+    @include container;
+    display: flex;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+
+    .left {
+      width: 50%;
+
+      @media (max-width: $tablet) {
+        width: 100%;
+        margin-bottom: 48px;
+      }
+
+      .title {
+        @include sectionTitle;
+        margin-bottom: 40px;
+
+        @media (max-width: $mobile) {
+          margin-bottom: 20px;
+        }
+      }
+      .text {
+        margin-bottom: 56px;
+        max-width: 423px;
+        font-size: 18px;
+        line-height: 32px;
+
+        @media (max-width: $tablet) {
+          max-width: none;
+        }
+        @media (max-width: $mobile) {
+          margin-bottom: 32px;
+          font-size: 15px;
+          line-height: 26px;
+        }
+      }
+      .button {
+        @include button;
+      }
+    }
+    .right {
+      width: 50%;
+
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
+
+      .item {
+        margin-bottom: 25px;
+        border-bottom: 1px solid rgba(30, 26, 32, 0.2);
+
+        @media (max-width: $mobile) {
+          margin-bottom: 16px;
+        }
+
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+          padding-bottom: 25px;
+
+          &:hover {
+            .headerButton {
+              background-color: $third-color;
+            }
+          }
+
+          @media (max-width: $mobile) {
+            padding-bottom: 16px;
+          }
+
+          .headerTitle {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 34px;
+
+            @media (max-width: $mobile) {
+              font-size: 18px;
+              line-height: 28px;
+              max-width: 85%;
+            }
+          }
+          .headerButton {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            font-size: 30px;
+            color: white;
+            background-color: $secondary-color;
+            border: none;
+            border-radius: 100%;
+            cursor: pointer;
+            transition: background-color .2s linear;
+
+            .headerButtonIcon {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+        .content {
+          height: 0;
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          max-width: 82%;
+          transition: all .3s linear;
+
+          @media (max-width: $tablet) {
+            max-width: 90%;
+          }
+          @media (max-width: $mobile) {
+            font-size: 15px;
+            line-height: 26px;
+          }
+
+          &.show {
+            height: auto;
+            max-height: 9999px;
+            opacity: 1;
+            padding-bottom: 25px;
+            transition: all .3s linear;
+          }
+        }
+      }
+    }
+  }
+}
